@@ -1,0 +1,73 @@
+{
+  "name": "@datarisk/design-system",
+  "version": "1.0.0",
+  "description": "Datarisk design system components and theme",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@diego-nascimento"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "semantic-release": "semantic-release",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "lint-staged": "lint-staged",
+    "prettier:fix": "prettier --write ./src"
+  },
+  "lint-staged": {
+    "*.ts(x)": [
+      "npm run prettier:fix",
+      "git add ."
+    ]
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.1.4",
+    "@mui/material": "^6.1.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@storybook/addon-essentials": "^8.3.6",
+    "@storybook/addon-interactions": "^8.3.6",
+    "@storybook/addon-links": "^8.3.6",
+    "@storybook/addon-onboarding": "^8.3.6",
+    "@storybook/addon-themes": "^8.3.6",
+    "@storybook/blocks": "^8.3.6",
+    "@storybook/react": "^8.3.6",
+    "@storybook/react-vite": "^8.3.6",
+    "@storybook/test": "^8.3.6",
+    "@types/react": "^18.2.55",
+    "git-commit-msg-linter": "^5.0.8",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "storybook": "^8.3.6",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.1.4",
+    "@mui/material": "^6.1.4",
+    "react": ">=16"
+  },
+  "dependencies": {
+    "@fontsource/figtree": "^5.1.1",
+    "@fontsource/material-icons": "^5.1.0",
+    "rollup": "^4.24.0",
+    "semantic-release": "^24.1.2",
+    "vite": "^5.4.9"
+  }
+}

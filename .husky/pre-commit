@@ -1,0 +1,6 @@
+
+
+npm run lint-staged
+yarn build
+
+
